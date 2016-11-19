@@ -16,15 +16,14 @@ import KsiBarcode from "react-native-ksi-barcode"
 
 export default class barcodeTest extends Component {
   render() {
+    let val = "";
+    for (let i = 0; i < 9; i++) {
+      val += "9"
+    }
     return (
-       <View style={styles.container}>
-
-
-        <KsiBarcode style={styles.large} text="999"/>
-        <KsiBarcode style={styles.large} text="999999999"/>
-
-
-
+      <View style={styles.container}>
+        <KsiBarcode text='11111111' />
+        <KsiBarcode text='99999999' />
       </View>
     );
   }
@@ -38,11 +37,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 
-  large:{
-    fontSize:50,
+  large: {
+    fontSize: 50, flex: 1,
   },
-  llarge:{
-    fontSize:100,
+  llarge: {
+    fontSize: 90, flex: 1,
   },
 });
 
